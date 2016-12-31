@@ -224,7 +224,8 @@
 	      svgIcon: '@?mdSvgIcon',
 	      fontIcon: '@?mdFontIcon',
 	      arrow: '@?mdArrow',
-	      svgArrow: '@?mdSvgArrow'
+	      svgArrow: '@?mdSvgArrow',
+	      visible: '=mdVisible'
 	    },
 	    replace: true,
 	    transclude: true,
@@ -252,7 +253,7 @@
 	
 	exports.default = function () {
 	
-	  this.visible = false;
+	  //this.visible = this.visible ? this.visible : false;
 	
 	  this.changeState = function () {
 	    this.visible = !this.visible;
