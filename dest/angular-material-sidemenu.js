@@ -225,7 +225,7 @@
 	      fontIcon: '@?mdFontIcon',
 	      arrow: '@?mdArrow',
 	      svgArrow: '@?mdSvgArrow',
-	      active: '=mdActive'
+	      active: '@?mdActive'
 	    },
 	    replace: true,
 	    transclude: true,
