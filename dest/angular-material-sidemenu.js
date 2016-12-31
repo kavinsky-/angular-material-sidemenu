@@ -251,9 +251,7 @@
 	  value: true
 	});
 	
-	exports.default = function () {
-	
-	  this.visible = this.active;
+	exports.default = function ($scope) {
 	
 	  this.changeState = function () {
 	    this.visible = !this.visible;
@@ -272,7 +270,7 @@
 	
 	exports.default = function () {
 	
-	  return "\n    <div class=\"md-sidemenu-content\" layout=\"column\">\n      <md-button class=\"md-sidemenu-toggle\" ng-if=\"$mdSidemenuContent.heading\" ng-click=\"$mdSidemenuContent.changeState();\" ng-class=\"{ 'md-active': $mdSidemenuContent.visible }\">\n        <div layout=\"row\">\n          <md-icon ng-if=\"$mdSidemenuContent.svgIcon\" md-svg-icon=\"{{ $mdSidemenuContent.svgIcon }}\"></md-icon>\n          <md-icon ng-if=\"$mdSidemenuContent.icon\" ng-attr-md-font-icon=\"{{ $mdSidemenuContent.fontIcon }}\">{{ $mdSidemenuContent.icon }}</md-icon>\n          <span flex>{{ $mdSidemenuContent.heading }}</span>\n          <md-icon ng-if=\"$mdSidemenuContent.svgArrow\" md-svg-icon=\"{{ $mdSidemenuContent.svgArrow }}\"></md-icon>\n          <md-icon ng-if=\"$mdSidemenuContent.arrow\">keyboard_arrow_down</md-icon>\n        </div>\n      </md-button>\n\n      <div class=\"md-sidemenu-wrapper\" md-sidemenu-disable-animate ng-class=\"{ 'md-active': $mdSidemenuContent.visible, 'md-sidemenu-wrapper-icons':  $mdSidemenuContent.icon }\" layout=\"column\" ng-transclude></div>\n    </div>\n  ";
+	  return "\n    <div ng-init=\"$mdSidemenuContent.visible = ($mdSidemenuContent.active == 'true')\" class=\"md-sidemenu-content\" layout=\"column\">\n      <md-button class=\"md-sidemenu-toggle\" ng-if=\"$mdSidemenuContent.heading\" ng-click=\"$mdSidemenuContent.changeState();\" ng-class=\"{ 'md-active': $mdSidemenuContent.visible }\">\n        <div layout=\"row\">\n          <md-icon ng-if=\"$mdSidemenuContent.svgIcon\" md-svg-icon=\"{{ $mdSidemenuContent.svgIcon }}\"></md-icon>\n          <md-icon ng-if=\"$mdSidemenuContent.icon\" ng-attr-md-font-icon=\"{{ $mdSidemenuContent.fontIcon }}\">{{ $mdSidemenuContent.icon }}</md-icon>\n          <span flex>{{ $mdSidemenuContent.heading }}</span>\n          <md-icon ng-if=\"$mdSidemenuContent.svgArrow\" md-svg-icon=\"{{ $mdSidemenuContent.svgArrow }}\"></md-icon>\n          <md-icon ng-if=\"$mdSidemenuContent.arrow\">keyboard_arrow_down</md-icon>\n        </div>\n      </md-button>\n\n      <div class=\"md-sidemenu-wrapper\" md-sidemenu-disable-animate ng-class=\"{ 'md-active': $mdSidemenuContent.visible, 'md-sidemenu-wrapper-icons':  $mdSidemenuContent.icon }\" layout=\"column\" ng-transclude></div>\n    </div>\n  ";
 	};
 
 /***/ },
